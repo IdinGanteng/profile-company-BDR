@@ -1,19 +1,37 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../user.css';
-import { FaBars } from "react-icons/fa";
+import { FaBars, FaFilePdf, FaLanguage } from "react-icons/fa";
+import logoPT from '../../assets/logo-pt.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrollNav, setScrollNav] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
 
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener('scroll', changeBackground);
+    return () => {
+      window.removeEventListener('scroll', changeBackground);
+    };
+  }, []);
   return (
-    <nav className="navbar">
+    <nav className={`navbar ${scrollNav ? 'scroll-navbar' : ''}`}>
+      <a href="#" className="navbar-logo">
+        <img src={logoPT} alt='logo' width={200}/>
+      </a>
       <div className="navbar-container">
-        <a href="#" className="navbar-logo">MyWebsite</a>
         <div className="menu-icon" onClick={toggleNavbar}>
           <FaBars/>
         </div>
@@ -31,6 +49,15 @@ const Navbar = () => {
             <a href="#contact" className="nav-links">Contact</a>
           </li>
         </ul>
+          <button className='btn-fileCV'>
+            Send CV
+          </button>
+          <button className='icon-fileCV'>
+            <FaFilePdf/>
+          </button>
+          <button className='icon-language'>
+            <FaLanguage/>
+          </button>
       </div>
     </nav>
   );
