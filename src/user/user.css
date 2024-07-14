@@ -20,7 +20,7 @@ html{
 }
 
 .scroll-navbar {
-  background: #8d8d8d59;
+  background: #8d8d8dbb;
 }
 
 .navbar-container {
@@ -55,20 +55,22 @@ html{
   }
   
   .nav-links {
-    color: #5e5e5e;
+    color: #363636;
     display: flex;
     align-items: center;
     text-decoration: none;
     padding: 0rem 1rem;
     height: 80px;
+    transition: 0.3s ease;
   }
   
   .nav-links:hover {
-    border-bottom: 2px solid #5e5e5e;
+    border-bottom: 3px solid #04aa3b;
+    color: #04aa3b;
   }
 
   .btn-fileCV{
-    background-color: #04AA6D; /* Green */
+    background-color: #04aa3b; /* Green */
     border: none;
     color: white;
     padding: 10px 25px;
@@ -80,9 +82,12 @@ html{
     cursor: pointer;
     border-radius: 10px;
   }
+  .btn-fileCV:hover{
+    background-color: #25cf5e;
+  }
 
   .icon-language{
-    background-color: #04AA6D; /* Green */
+    background-color: #04aa3b; /* Green */
     border: none;
     color: white;
     padding: 4px 10px;
@@ -94,9 +99,12 @@ html{
     cursor: pointer;
     border-radius: 10px;
   }
+  .icon-language:hover{
+    background-color: #25cf5e;
+  }
 
   .icon-fileCV{
-    background-color: #04AA6D; /* Green */
+    background-color: #04aa3b; /* Green */
     border: none;
     color: white;
     padding: 4px 10px;
@@ -108,41 +116,85 @@ html{
     cursor: pointer;
     border-radius: 10px;
   }
+  .icon-fileCV:hover{
+    background-color: #25cf5e;
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    background-color: white;
+    color: black;
+    list-style: none;
+    padding: 10px;
+    margin-left: 40%;
+    margin-top: 70px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    z-index: 1000;
+  }
+  
+  .dropdown-item {
+    padding: 8px 12px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f1f1f1;
+  }
 
   /* src/components/Hero.css */
 
 .hero-container {
-  height: 100vh;
-  background: #ffffff;
+  width: 100%;
+  height: 90vh;
+  background-image: url('../assets/jabat-tangan.jpg');
+  background-size: cover;
+  text-align: center;
+  margin-top: -20px;
+}
+
+.hero-content{
+  background-color: #050314d0;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding-top: 80px;
+}
+.hero-content h1{
+  font-size: 5vw;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bold;
+  color: #04aa3b; 
 }
 
-.hero-container h1 {
-  font-size: 3rem;
+.hero-content span{
+  color: white;
 }
 
-.hero-container p {
-  margin: 1rem 0;
-  font-size: 1.5rem;
+.hero-content h3{
+  font-size: 2vw;
+  font-weight: bold;
+  color: white; 
 }
 
-.hero-container button {
-  padding: 0.5rem 2rem;
-  font-size: 1rem;
-  background: #1888ff;
-  color: #fff;
+.hero-content button{
+  background-color: #04aa3b; /* Green */
   border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
   cursor: pointer;
+  border-radius: 10px;
+}
+.hero-content button:hover{
+  background-color: #25cf5e;
 }
 
-.hero-container button:hover {
-  background: #0056b3;
-}
 
 /* src/components/About.css */
 

@@ -7,6 +7,7 @@ import logoPT from '../../assets/logo-pt.png';
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
+  const [showDropdown, setShowDropdown] = useState(false);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
@@ -26,6 +27,11 @@ const Navbar = () => {
       window.removeEventListener('scroll', changeBackground);
     };
   }, []);
+
+  const openDropdwon = () => {
+    setShowDropdown(!showDropdown);
+  };
+
   return (
     <nav className={`navbar ${scrollNav ? 'scroll-navbar' : ''}`}>
       <a href="#" className="navbar-logo">
@@ -55,9 +61,15 @@ const Navbar = () => {
           <button className='icon-fileCV'>
             <FaFilePdf/>
           </button>
-          <button className='icon-language'>
+          <button className='icon-language' onClick={openDropdwon}>
             <FaLanguage/>
           </button>
+          {showDropdown && (
+            <ul className="dropdown-menu">
+              <li className="dropdown-item">Indonesia</li>
+              <li className="dropdown-item">English</li>
+            </ul>
+          )}
       </div>
     </nav>
   );
