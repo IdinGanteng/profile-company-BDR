@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import emailjs from 'emailjs-com';
+import gambar from '../../assets/image-email.png';
 
 const EmailForm = () => {
   const [formData, setFormData] = useState({
@@ -43,44 +44,54 @@ const EmailForm = () => {
 
   return (
     <div className='container-form-email'>
-      <form className='form-email' onSubmit={handleSubmit}>
-      <h1 style={{textAlign:'center'}}>Hubungi Kami</h1>
-        <div>
-            <input
-            type="text"
-            name="name"
-            placeholder="Your name.."
-            value={formData.name}
-            onChange={handleChange}
-            required
-            />
-
-            <input
-            type="email"
-            name="email"
-            placeholder="Your email.."
-            value={formData.email}
-            onChange={handleChange}
-            required
-            />
+      <div className='sub-form-email'>
+        <div className='pantek-anjing'>
+          <h1>HUBUNGI KAMI</h1>
+          <p>Kami senang mendengar dari anda!</p>
         </div>
-        <input
-          type="text"
-          name="subject"
-          placeholder="Subject.."
-          value={formData.subject}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Write something.."
-          value={formData.message}
-          onChange={handleChange}
-          required
-        />
-        <button type="submit">Kirim</button>
-      </form>
+        <div className='anjing-pantek'>
+        <form className='form-email' onSubmit={handleSubmit}>
+          <div>
+              <input
+              type="text"
+              name="name"
+              placeholder="Your name.."
+              value={formData.name}
+              onChange={handleChange}
+              required
+              />
+
+              <input
+              type="email"
+              name="email"
+              placeholder="Your email.."
+              value={formData.email}
+              onChange={handleChange}
+              required
+              />
+          </div>
+          <input
+            type="text"
+            name="subject"
+            placeholder="Subject.."
+            value={formData.subject}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            placeholder="Write something.."
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit">Kirim</button>
+        </form>
+        <div className="image-3d-container">
+          <img src={gambar} alt='gambar' className='image-3d'/>
+        </div>
+        </div>
+      </div>
     </div>
   );
 };

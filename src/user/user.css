@@ -5,6 +5,7 @@ body{
 }
 html{
   scroll-behavior: smooth;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 .navbar {
   background: #ffffff;
@@ -346,66 +347,53 @@ html{
 
 /* destinasi */
 
-.destinasi-container{
+.destinasi-container {
   text-align: center;
-  padding: 10px;
-  background-image: url('../assets/background-paper.jpg');
+  padding: 50px;
 }
 
 .card-destinasi-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-  margin-top: 20px;
+  width: 100%;
+  max-width: 1320px;
+
 }
 
 .card-destinasi {
-  background-color: #fff;
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition:  .5s ease;
+  position: relative;
   cursor: pointer;
-  backface-visibility: hidden;
-  opacity: 1;
-}
-
-.card-destinasi:hover {
-  transform: translateY(-10px);
+  /* Menambahkan jarak horizontal antar card */
 }
 
 .card-destinasi-image {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border: none;
+  width: 98%;
+  height: auto;
+  border-radius: 10px;
 }
 
-.hover-country{
-  transition: .5s ease;
-  opacity: 0;
+.hover-country {
+  width: 98%;
+  border-radius: 10px;
   position: absolute;
-  width: 100%;
-  height: 200px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  text-align: center;
-  background-color: #3333339d;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
-.hover-country:hover{
+.card-destinasi:hover .hover-country {
   opacity: 1;
 }
 
-.hover-country-text{
-  color: white;
-  font-size: 16px;
+.hover-country-text h1 {
+  margin: 0;
+  font-size: 24px;
 }
 
 .modal-country-overlay {
@@ -532,29 +520,25 @@ html{
 /* kontak */
 
 #contact{
-  background-image: url('../assets/background-paper.jpg');
-  padding: 30px;
-  color: #555;
+  width: 100%;
+  background-color: rgb(229, 231, 235);
+  padding-top: 30PX;
+  font-weight: bold;
+  padding-bottom: 100px;
+  margin: 0;
 }
+
 .kontak-container{
   text-align: center;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   margin-top: 50px;
-  display: flex;
-  flex-direction: row;
   gap: 10px;
 }
 .kontak-container h2{
-  font-size: 2rem;
-}
-
-.kontak-sub-container1{
-  display: flex;
-  flex-direction: column;
+  font-size: 2.5rem;
 }
 .kontak-list{
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 10px;
   justify-content: center;
   align-items: center;
@@ -576,37 +560,43 @@ html{
   box-shadow: 0 2px 5px rgba(0,0,0,0.2);
 }
 
-.kontak-maps{
-  background-color: #fff;
-  border: none;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
-  transition: transform 0.2s;
-  cursor: pointer;
-  text-align: left;
-  width: 50%;
-}
-
 .container-form-email{
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #dfdbdb;
+  background-color: rgb(229, 231, 235);
 }
-.form-email {
-  width: 100%;
+.sub-form-email{
   padding: 10px;
-  max-width: 500px;
-  background: #f9f9f9;
+  max-width: 1000px;
+  background: #25d366;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+}
+.pantek-anjing{
+  color: white;
+  text-align: center;
+  font-size: 1rem;
+}
+.anjing-pantek{
+  display: flex;
+  flex-direction: row;
+}
+.form-email{
+  width: 200%;
+}
+.image-3d {
+  width: 90%;
+  position: relative;
+  margin-top: -180px;
+  float: right;
 }
 .form-email div{
   display: flex;
   flex-direction: row;
-  gap: 10px;
 }
 
 .form-email input{
@@ -643,7 +633,7 @@ html{
 
 .footer {
   width: 100%;
-  background-color:#acacac;
+  background-color:#000000;
   color: white;
   text-align: center;
   margin-top: -80px;
@@ -680,22 +670,21 @@ html{
   .nav-menu {
     display: flex;
     flex-direction: column;
-    width: 30%;
-    height: 30vh;
+    width: 100%;
+    height: 40vh;
     position: fixed;
-    top: 50px;
-    right: -100%; /* Mengubah posisi awal ke kanan */
+    right: 0;
+    top: -100%; /* Mengubah posisi awal ke kanan */
     opacity: 1;
     transition: all 0.5s ease;
     border-radius: 10px 0px 0px 10px;
-    box-shadow: 5px 10px 18px #888888;
   }
 
   .nav-menu.active {
-    background: #ffffff;
-    right: 0; /* Mengubah posisi akhir ke kanan */
+    background: #000000;
+    top: 60px; /* Mengubah posisi akhir ke kanan */
     transition: all 0.5s ease;
-    z-index: 1;
+    z-index: -1;
   }
 
   .nav-item {
@@ -709,6 +698,7 @@ html{
     padding: 0rem 0rem;
     margin-top: 20px;
     height: auto;
+    color: white;
   }
 
   .nav-links:hover {
@@ -745,6 +735,15 @@ html{
   }
   .kontak-maps{
     width: 100%;
+  }
+  .card-destinasi-image{
+    width: 100%;
+  }
+  .image-3d{
+    display: none;
+  }
+  .kontak-list{
+    flex-direction: column;
   }
 }
   
