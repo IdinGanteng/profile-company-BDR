@@ -1,6 +1,7 @@
 /* src/components/Navbar.css */
 body{
   margin: 0;
+  background: #f4f4f4;
 }
 html{
   scroll-behavior: smooth;
@@ -199,13 +200,8 @@ html{
 /* src/components/About.css */
 
 .about-container {
-  padding: 4rem 2rem;
-  background: #f4f4f4;
+  /* padding: 4rem 2rem; */
   text-align: center;
-}
-
-.about-container h1 {
-  font-size: 2.5rem;
 }
 
 .about-container p {
@@ -213,15 +209,447 @@ html{
   font-size: 1.2rem;
 }
 
-/* src/components/Footer.css */
-
-.footer-container {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem 0;
+.about-sub1{
+  display: flex;
+  flex-direction: row-reverse;
+  margin-top: 10vh;
+  gap: 20px;
+  padding: 4rem 2rem;
+}
+.about-sub1 p{
+  text-align: left;
 }
 
+.about-sub2{
+  padding: 20px;
+}
+
+.about-sub3{
+  display: flex;
+  flex-direction: row;
+  margin-top: 20px;
+  background-color: #1a1a1a;
+  color: white;
+  padding: 4rem 2rem;
+}
+
+.about-sub3-desc{
+  width: 100%;
+  text-align: left;
+}
+.about-sub3-desc button{
+  background-color: #04aa3b; /* Green */
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.about-sub3-img {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 10px;
+}
+
+.about-sub3-img img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* news */
+
+.news-container{
+  text-align: center;
+  padding: 10px;
+}
+
+.card-news-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-news {
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+  text-align: left;
+}
+
+.card-news:hover {
+  transform: translateY(-10px);
+}
+
+.card-news-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: none;
+}
+
+.card-news-content {
+  padding: 15px;
+}
+
+.card-news-content h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+.card-news-content p {
+  font-size: 1em;
+  color: #555;
+}
+
+.modal-news-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-news-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-news-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+/* destinasi */
+
+.destinasi-container{
+  text-align: center;
+  padding: 10px;
+  background-image: url('../assets/background-paper.jpg');
+}
+
+.card-destinasi-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.card-destinasi {
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition:  .5s ease;
+  cursor: pointer;
+  backface-visibility: hidden;
+  opacity: 1;
+}
+
+.card-destinasi:hover {
+  transform: translateY(-10px);
+}
+
+.card-destinasi-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border: none;
+}
+
+.hover-country{
+  transition: .5s ease;
+  opacity: 0;
+  position: absolute;
+  width: 100%;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: #3333339d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hover-country:hover{
+  opacity: 1;
+}
+
+.hover-country-text{
+  color: white;
+  font-size: 16px;
+}
+
+.modal-country-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-country-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  max-width: 1000px;
+  width: 100%;
+  position: relative;
+}
+
+.modal-country-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.modal-form-close{
+  display: none;
+}
+
+/* form default */
+.form-default input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-default button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+
+.form-default{
+  width: 50%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.form-country{
+  width: 100%;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+}
+
+.split-form-country{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-country input {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-country button {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.container-form-default{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: white;
+  border-radius: 20%;
+  padding: 15px;
+  font-size: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  text-align: center;
+}
+
+.whatsapp-icon:hover {
+  background-color: #1ebe57;
+}
+
+/* kontak */
+
+#contact{
+  background-image: url('../assets/background-paper.jpg');
+  padding: 30px;
+  color: #555;
+}
+.kontak-container{
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+.kontak-container h2{
+  font-size: 2rem;
+}
+
+.kontak-sub-container1{
+  display: flex;
+  flex-direction: column;
+}
+.kontak-list{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+.kontak-list-container{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+
+.kontak-list-container a{
+  background-color: #25d366;
+  color: white;
+  border-radius: 20%;
+  padding: 15px;
+  font-size: 25px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.kontak-maps{
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+  cursor: pointer;
+  text-align: left;
+  width: 50%;
+}
+
+.container-form-email{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #dfdbdb;
+}
+.form-email {
+  width: 100%;
+  padding: 10px;
+  max-width: 500px;
+  background: #f9f9f9;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+}
+.form-email div{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.form-email input{
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+.form-email textarea{
+  width: 100%;
+  padding: 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.form-email button {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 10px 20px;
+}
+
+.form-email button:hover {
+  background-color: #218838;
+}
+
+.footer {
+  width: 100%;
+  background-color:#acacac;
+  color: white;
+  text-align: center;
+  margin-top: -80px;
+  height: 100px;
+  padding-top: 100px;
+}
   
 @media screen and (max-width: 960px) {
   .menu-icon {
@@ -286,6 +714,37 @@ html{
   .nav-links:hover {
     border-radius: 0;
     height: 20px;
+  }
+
+  .about-sub1{
+    flex-direction: column;
+  }
+  .about-sub1 img{
+    width: 100%;
+  }
+  .about-sub2 img{
+    width: 100%;
+  }
+  
+  .about-sub3-img{
+    display: none;
+  }
+  .about-sub3-desc{
+    text-align: center;
+  }
+
+  .split-form-country{
+    flex-direction: column;
+  }
+  .form-default{
+    width: 100%;
+    padding: 10px;
+  }
+  .kontak-container{
+    flex-direction: column;
+  }
+  .kontak-maps{
+    width: 100%;
   }
 }
   

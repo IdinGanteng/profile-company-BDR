@@ -1,12 +1,18 @@
 import { useState } from 'react'
-import LandingPage from './user/LandingPage'
+import LandingPage from './user/LandingPage';
+import FormDefault from './user/FormDefault';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <LandingPage/>
+      <Router>
+        <Routes>
+          <Route path='/' element={<LandingPage/>}/>
+          <Route path='/pendaftaran' element={<FormDefault/>}/>
+        </Routes>
+      </Router>
     </>
   )
 }

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import '../user.css';
 import { FaBars, FaFilePdf, FaLanguage } from "react-icons/fa";
 import logoPT from '../../assets/logo-pt.png';
+import { useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -32,6 +33,12 @@ const Navbar = () => {
     setShowDropdown(!showDropdown);
   };
 
+  const navigate = useNavigate('');
+
+  const sendCv =()=>{
+    navigate('/pendaftaran');
+  }
+
   return (
     <nav className={`navbar ${scrollNav ? 'scroll-navbar' : ''}`}>
       <a href="#" className="navbar-logo">
@@ -43,22 +50,25 @@ const Navbar = () => {
         </div>
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <a href="#home" className="nav-links">Home</a>
+            <a href="#home" className="nav-links">Beranda</a>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-links">About</a>
+            <a href="#about" className="nav-links">Tentang Kami</a>
           </li>
           <li className="nav-item">
-            <a href="#services" className="nav-links">Services</a>
+            <a href="#news" className="nav-links">Info</a>
           </li>
           <li className="nav-item">
-            <a href="#contact" className="nav-links">Contact</a>
+            <a href="#destinasi" className="nav-links">Destinasi</a>
+          </li>
+          <li className="nav-item">
+            <a href="#contact" className="nav-links">Kontak</a>
           </li>
         </ul>
-          <button className='btn-fileCV'>
+          <button className='btn-fileCV' onClick={sendCv}>
             Send CV
           </button>
-          <button className='icon-fileCV'>
+          <button className='icon-fileCV' onClick={sendCv}>
             <FaFilePdf/>
           </button>
           <button className='icon-language' onClick={openDropdwon}>
