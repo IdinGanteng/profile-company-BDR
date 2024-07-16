@@ -12,9 +12,9 @@ const About = () => {
       <p>Kami telah bekerja dengan 200+ klien</p>
       <div className='about-sub1'>
         <div>
-          <h1>PT. BINA DINAMITA RAMA</h1>
-          <p>Perusahaan kami didirikan dengan tekad untuk melatih dan menghasilkan sumber daya manusia yang berkualitas. Hal ini bertujuan untuk memenuhi kebutuhan tenaga kerja di kancah internasional sesuai dengan kualifikasi yang ada. Selain menyalurkan tenaga kerja secara global, perusahaan kami juga fokus dalam membantu perbaikan kehidupan masyarakat melalui pelayanan pemberian tenaga kerja.
-          Kami selalu berkomitmen untuk mempertahankan kualitas rekrutmen sumber daya manusia yang berdasarkan nilai profesionalisme. Dedikasi yang kami berikan melalui peningkatan dan pengembangan sumber daya adalah untuk memberikan sumber daya manusia yang terlatih dan kompeten. Diharapkan dengan semangat dan usaha yang baik, kami dapat memberikan pelayanan yang terbaik dan memuaskan untuk klien kami.</p>
+          <h2>PT. BINA <span style={{color:'red'}}>DINAMITA</span> RAMA</h2>
+          <p>Perusahaan kami didirikan dengan tekad untuk melatih dan menghasilkan sumber daya manusia yang berkualitas. Hal ini bertujuan untuk memenuhi kebutuhan tenaga kerja di kancah internasional sesuai dengan kualifikasi yang ada. Selain menyalurkan tenaga kerja secara global, perusahaan kami juga fokus dalam membantu perbaikan kehidupan masyarakat melalui pelayanan pemberian tenaga kerja.</p>
+          <p>Kami selalu berkomitmen untuk mempertahankan kualitas rekrutmen sumber daya manusia yang berdasarkan nilai profesionalisme. Dedikasi yang kami berikan melalui peningkatan dan pengembangan sumber daya adalah untuk memberikan sumber daya manusia yang terlatih dan kompeten. Diharapkan dengan semangat dan usaha yang baik, kami dapat memberikan pelayanan yang terbaik dan memuaskan untuk klien kami.</p>
         </div>
         <div>
           <img src={img1} alt='img1'/>
@@ -36,9 +36,6 @@ const About = () => {
           <img src={kegiatan1} alt='kegiatan1'/>
           <img src={kegiatan2} alt='kegiatan2'/>
           <img src={kegiatan1} alt='kegiatan1'/>
-          <img src={kegiatan2} alt='kegiatan2'/>
-          <img src={kegiatan1} alt='kegiatan1'/>
-          <img src={kegiatan2} alt='kegiatan2'/>
         </div>
       </div>
     </div>

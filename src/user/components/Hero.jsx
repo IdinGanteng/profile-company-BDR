@@ -13,7 +13,7 @@ const Hero = () => {
         <div>
           <h1>PT BINA <span>DINAMITA</span> RAMA</h1>
           <h3>PERUSAHAAN PENEMPATAN KERJA</h3>
-          <h3>MIGRAN INDONESIA</h3>
+          <h3><span style={{color:'red'}}>MIGRAN</span> INDONESIA</h3>
         </div>
         <div>
           <button onClick={handleClick}>Daftar Sekarang</button>

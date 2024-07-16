@@ -5,7 +5,7 @@ const Kontak = () => {
   return (
     <div id='contact'>
         <div className='kontak-container' id='contact'>
-            <h3>HUBUNGI KAMI</h3>
+            <h1 style={{color:'#25d366'}}>HUBUNGI KAMI</h1>
             <h2>JIKA ANDA MEMILIKI PERTANYAAN, JANGAN RAGU UNTUK MENGHUBUNGI KAMI</h2>
             <div className='kontak-list'>
                 <div className='kontak-list-container'>

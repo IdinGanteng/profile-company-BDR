@@ -4,6 +4,8 @@ import '../user.css';
 import { FaBars, FaFilePdf, FaLanguage } from "react-icons/fa";
 import logoPT from '../../assets/logo-pt.png';
 import { useNavigate } from 'react-router-dom';
+import idnFlag from '../../assets/idn-flag.png';
+import engFlag from '../../assets/eng-flag.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,12 +74,18 @@ const Navbar = () => {
             <FaFilePdf/>
           </button>
           <button className='icon-language' onClick={openDropdwon}>
-            <FaLanguage/>
+            <img src={idnFlag} alt='idn-flag'/>
           </button>
           {showDropdown && (
             <ul className="dropdown-menu">
-              <li className="dropdown-item">Indonesia</li>
-              <li className="dropdown-item">English</li>
+              <li className="dropdown-item">
+                <img src={idnFlag} alt='idn-flag'/>
+                <span>Indonesia</span>
+              </li>
+              <li className="dropdown-item">
+                <img src={engFlag} alt='eng-flag'/>
+                <span>English</span>
+              </li>
             </ul>
           )}
       </div>

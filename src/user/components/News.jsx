@@ -1,6 +1,7 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
 import ModalNews from './ModalNews';
+import lari1 from '../../assets/lari1.jpg';
 
 const News = () => {
     const [news, setNews] = useState([]);
@@ -31,10 +32,11 @@ const News = () => {
       <div className="card-news-container">
         {news.map((event) => (
           <div key={event.id} className="card-news" onClick={()=> handleCardClick(event)}>
-            <img src={event.picture} alt={event.titel} className="card-news-image" />
+            <img src={lari1} alt={event.titel} className="card-news-image" />
             <div className="card-news-content">
               <h2>{event.title}</h2>
               <p>{event.content}</p>
+              <h1>Baca Selengkapnya &#8599;</h1>
             </div>
           </div>
         ))}

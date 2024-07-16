@@ -2,18 +2,40 @@ import React, { useState, useEffect } from 'react';
 import Slider from 'react-slick';
 import flag from '../../assets/bendera.jpg';
 import ModalCountry from './ModalCountry';
+import monas from '../../assets/monas.jpg';
+import gedungArab from '../../assets/gedung-arab.jpg';
+import gedungMalay from '../../assets/gedung-malaysia.jpg';
 
 const Destinasi = () => {
-  const [countries, setCountries] = useState([]);
+  const [countries, setCountries] = useState([
+    {
+      _id:1,
+      countryName: 'Indonesia',
+      picture: monas,
+      description: 'Indonesia, dengan nama resmi Republik Indonesia, adalah sebuah negara kepulauan di Asia Tenggara yang dilintasi garis khatulistiwa dan berada di antara daratan benua Asia dan Oseania sehingga dikenal sebagai negara lintas benua, serta antara Samudra Pasifik dan Samudra Hindia'
+    },
+    {
+      _id:2,
+      countryName: 'Malaysia',
+      picture: gedungArab,
+      description: 'Indonesia, dengan nama resmi Republik Indonesia, adalah sebuah negara kepulauan di Asia Tenggara yang dilintasi garis khatulistiwa dan berada di antara daratan benua Asia dan Oseania sehingga dikenal sebagai negara lintas benua, serta antara Samudra Pasifik dan Samudra Hindia'
+    },
+    {
+      _id:3,
+      countryName: 'Saudi Arabia',
+      picture: gedungArab,
+      description: 'Indonesia, dengan nama resmi Republik Indonesia, adalah sebuah negara kepulauan di Asia Tenggara yang dilintasi garis khatulistiwa dan berada di antara daratan benua Asia dan Oseania sehingga dikenal sebagai negara lintas benua, serta antara Samudra Pasifik dan Samudra Hindia'
+    }
+  ]);
   const [selectedCountry, setSelectedCountry] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  useEffect(() => {
-    fetch('https://bdr.vercel.app/api/v1/countries')
-      .then(response => response.json())
-      .then(data => setCountries(data.data))
-      .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  // useEffect(() => {
+  //  fetch('https://bdr.vercel.app/api/v1/countries')
+  //     .then(response => response.json())
+  //     .then(data => setCountries(data.data))
+  //     .catch(error => console.error('Error fetching data:', error));
+  // }, []); 
 
   const handleCardClick = (country) => {
     setSelectedCountry(country);
@@ -63,10 +85,11 @@ const Destinasi = () => {
     <div className='destinasi-container' id='destinasi'>
       <h1>Destinasi</h1>
       <p>Negara Destinasi</p>
-      <Slider {...settings} className="card-destinasi-container">
+      <div className='carousel'>
+      <Slider {...settings}>
         {countries.map((country) => (
           <div key={country._id} className="card-destinasi" onClick={() => handleCardClick(country)}>
-            <img src={flag} alt={country.countryName} className="card-destinasi-image" />
+            <img src={country.picture} alt={country.countryName} className="card-destinasi-image" />
             <div className="hover-country">
               <div className="hover-country-text">
                 <h1>{country.countryName}</h1>
@@ -75,6 +98,7 @@ const Destinasi = () => {
           </div>
         ))}
       </Slider>
+      </div>
       <ModalCountry isOpen={isModalOpen} onClose={closeModal} data={selectedCountry} />
     </div>
   );

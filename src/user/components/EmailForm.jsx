@@ -55,7 +55,7 @@ const EmailForm = () => {
               <input
               type="text"
               name="name"
-              placeholder="Your name.."
+              placeholder="Nama"
               value={formData.name}
               onChange={handleChange}
               required
@@ -64,7 +64,7 @@ const EmailForm = () => {
               <input
               type="email"
               name="email"
-              placeholder="Your email.."
+              placeholder="Email"
               value={formData.email}
               onChange={handleChange}
               required
@@ -73,19 +73,19 @@ const EmailForm = () => {
           <input
             type="text"
             name="subject"
-            placeholder="Subject.."
+            placeholder="Subjek"
             value={formData.subject}
             onChange={handleChange}
             required
           />
           <textarea
             name="message"
-            placeholder="Write something.."
+            placeholder="Message"
             value={formData.message}
             onChange={handleChange}
             required
           />
-          <button type="submit">Kirim</button>
+          <button type="submit">Kirim Pesan</button>
         </form>
         <div className="image-3d-container">
           <img src={gambar} alt='gambar' className='image-3d'/>

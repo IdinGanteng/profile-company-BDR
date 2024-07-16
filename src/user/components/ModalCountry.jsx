@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import monas from '../../assets/monas.jpg';
+import gedungArab from '../../assets/gedung-arab.jpg';
+import gedungMalay from '../../assets/gedung-malaysia.jpg';
 
 const ModalCountry = ({ isOpen, onClose, data }) => {
     const [modalForm, setModalForm] = useState(false);
@@ -14,7 +16,6 @@ const ModalCountry = ({ isOpen, onClose, data }) => {
       cv: null,
     });
 
-    const navigate = useNavigate();
 
     const handleChange = (e) => {
       const { name, value, files } = e.target;
@@ -62,10 +63,16 @@ const ModalCountry = ({ isOpen, onClose, data }) => {
     <>
     <div className={modalForm ? "modal-form-close" : "modal-country-overlay"} onClick={onClose}>
       <div className="modal-country-content" onClick={e => e.stopPropagation()}>
-        <button className="modal-country-close" onClick={onClose}>X</button>
-        <h2>{data.countryName}</h2>
-        <p>{data.description}</p>
-        <button onClick={handleOpenForm}>Daftar Sekrang</button>
+        {/* <button className="modal-country-close" onClick={onClose}>X</button> */}
+        <img src={data.picture} alt={data.countryName} style={{width:'100%'}}/>
+        <div style={{textAlign:'left'}}>
+          <h2>{data.countryName}</h2>
+          <p>{data.description}</p>
+          <div style={{display:'flex', flexDirection:'row'}}>
+          <button onClick={handleOpenForm} className='btn-modal-country'>Daftar Sekrang</button>
+          <button onClick={onClose} className='btn-modal-country-close'>tutup</button>
+          </div>
+        </div>
       </div>
     </div>
     <div className={modalForm ? "modal-country-overlay" : "modal-form-close"}>
