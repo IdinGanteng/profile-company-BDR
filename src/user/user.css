@@ -875,5 +875,8 @@ html{
   .news-container p{
     font-size: 3vw;
   }
+  .kontak-container h2{
+    font-size: 1rem;
+  }
 }
   
