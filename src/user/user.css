@@ -250,7 +250,7 @@ html{
   text-align: left;
 }
 .about-sub3 p{
-  font-size: 2.7vw;
+  font-size: 1.5vw;
 }
 .about-sub3-desc button{ 
   border: 2px solid white;
@@ -867,7 +867,7 @@ html{
     font-size: 7vw;
   }
   .about-container p{
-    font-size: 3vw;
+    font-size: 4vw;
   }
   .news-container h1{
     font-size: 7vw;
@@ -877,6 +877,9 @@ html{
   }
   .kontak-container h2{
     font-size: 1rem;
+  }
+  .about-sub3 p{
+    font-size: 4vw;
   }
 }
   
