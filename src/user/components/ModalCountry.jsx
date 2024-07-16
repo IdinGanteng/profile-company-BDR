@@ -76,7 +76,7 @@ const ModalCountry = ({ isOpen, onClose, data }) => {
       </div>
     </div>
     <div className={modalForm ? "modal-country-overlay" : "modal-form-close"}>
-      <div className="modal-country-content" onClick={e => e.stopPropagation()}>
+      <div className="modal-country-content" onClick={e => e.stopPropagation()} style={{marginTop:'20vh'}}>
         <button className="modal-country-close" onClick={closeForm}>X</button>
         <form className='form-country'>
           <div className='split-form-country'>
