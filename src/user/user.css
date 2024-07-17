@@ -743,7 +743,7 @@ html{
   padding: 5px;
 }
   
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 1200px) {
   .menu-icon {
     display: block;
     top: 20px;

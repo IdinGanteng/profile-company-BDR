@@ -13,10 +13,10 @@ const LandingPage = () => {
       <Navbar/>
       <Hero/>
       <About/>
-      <News/>
-      <Destinasi/>
-      <Kontak/>
-      <EmailForm/>
+      {/* <News/>
+      <Destinasi/> */}
+      {/* <Kontak/>
+      <EmailForm/> */}
     </div>
   )
 }
