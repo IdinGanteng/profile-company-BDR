@@ -38,7 +38,7 @@ const Navbar = () => {
   const navigate = useNavigate('');
 
   const sendCv =()=>{
-    navigate('/pendaftaran');
+    navigate('/');
   }
 
   return (
