@@ -1,5 +1,4 @@
-
-import React, { useState, useEffect } from 'react';
+import React, { useState,useRef, useEffect } from 'react';
 import '../user.css';
 import { FaBars, FaFilePdf, FaLanguage } from "react-icons/fa";
 import logoPT from '../../assets/logo-pt.png';
@@ -14,6 +13,8 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState(false);
   const [currentLang, setCurrentLang] = useState(null);
 
+  const navRef = useRef(null);
+
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
   };
@@ -23,6 +24,7 @@ const Navbar = () => {
   const changeLanguage = (lng) => {
     i18n.changeLanguage(lng);
     setCurrentLang(lng);
+    setShowDropdown(false);
   };
 
   const changeBackground = () => {
@@ -33,10 +35,20 @@ const Navbar = () => {
     }
   };
 
+  const handleClickOutside = (event) => {
+    if (navRef.current && !navRef.current.contains(event.target)) {
+      setIsOpen(false);
+    }
+  };
+
+
   useEffect(() => {
+    document.addEventListener('mousedown', handleClickOutside);
     window.addEventListener('scroll', changeBackground);
     return () => {
       window.removeEventListener('scroll', changeBackground);
+      document.removeEventListener('mousedown', handleClickOutside);
+
     };
   }, []);
 
@@ -51,7 +63,7 @@ const Navbar = () => {
   }
 
   return (
-    <nav className={`navbar ${scrollNav ? 'scroll-navbar' : ''}`}>
+    <nav className={`navbar ${scrollNav ? 'scroll-navbar' : ''}`} ref={navRef}>
       <a href="#" className="navbar-logo">
         <img src={logoPT} alt='logo' width={200}/>
       </a>

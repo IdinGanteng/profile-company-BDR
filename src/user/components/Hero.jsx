@@ -18,7 +18,7 @@ const Hero = () => {
           <h3><span style={{color:'red'}}>{t('Placement')}</span> {t('Agencies')}</h3>
         </div>
         <div>
-          <button onClick={handleClick}>{t('sign up now')}</button>
+          {/* <button onClick={handleClick}>{t('sign up now')}</button> */}
         </div>
       </div>
     </div>
