@@ -7,7 +7,7 @@ const Hero = () => {
   const { t } = useTranslation();
 
   const handleClick =()=>{
-    navigate('/pendaftaran');
+    navigate('/');
   }
   return (
     <div className='hero-container' id='home'>
