@@ -6,14 +6,23 @@ import logoPT from '../../assets/logo-pt.png';
 import { useNavigate } from 'react-router-dom';
 import idnFlag from '../../assets/idn-flag.png';
 import engFlag from '../../assets/eng-flag.png';
+import { useTranslation } from 'react-i18next';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrollNav, setScrollNav] = useState(false);
   const [showDropdown, setShowDropdown] = useState(false);
+  const [currentLang, setCurrentLang] = useState(null);
 
   const toggleNavbar = () => {
     setIsOpen(!isOpen);
+  };
+
+  const { i18n } = useTranslation();
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+    setCurrentLang(lng);
   };
 
   const changeBackground = () => {
@@ -52,12 +61,12 @@ const Navbar = () => {
         </div>
         <ul className={isOpen ? 'nav-menu active' : 'nav-menu'}>
           <li className="nav-item">
-            <a href="#home" className="nav-links">Beranda</a>
+            <a href="#home" className="nav-links">{i18n.t('Home')}</a>
           </li>
           <li className="nav-item">
-            <a href="#about" className="nav-links">Tentang Kami</a>
+            <a href="#about" className="nav-links">{i18n.t('About Us')}</a>
           </li>
-          <li className="nav-item">
+          {/* <li className="nav-item">
             <a href="#news" className="nav-links">Info</a>
           </li>
           <li className="nav-item">
@@ -65,24 +74,24 @@ const Navbar = () => {
           </li>
           <li className="nav-item">
             <a href="#contact" className="nav-links">Kontak</a>
-          </li>
+          </li> */}
         </ul>
-          <button className='btn-fileCV' onClick={sendCv}>
+          {/* <button className='btn-fileCV' onClick={sendCv}>
             Send CV
           </button>
           <button className='icon-fileCV' onClick={sendCv}>
             <FaFilePdf/>
-          </button>
+          </button> */}
           <button className='icon-language' onClick={openDropdwon}>
-            <img src={idnFlag} alt='idn-flag'/>
+            <img src={currentLang === 'id' ? idnFlag : engFlag} alt='flag'/>
           </button>
           {showDropdown && (
             <ul className="dropdown-menu">
-              <li className="dropdown-item">
+              <li className="dropdown-item" onClick={() => changeLanguage('id')}>
                 <img src={idnFlag} alt='idn-flag'/>
                 <span>Indonesia</span>
               </li>
-              <li className="dropdown-item">
+              <li className="dropdown-item" onClick={() => changeLanguage('en')}>
                 <img src={engFlag} alt='eng-flag'/>
                 <span>English</span>
               </li>

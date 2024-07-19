@@ -12,11 +12,8 @@ const Footer = () => {
         </div>
         <div className='sub-footer2'>
           <h2>QUICK LINK</h2>
-          <a>Home</a>
-          <a>About</a>
-          <a>Information</a>
-          <a>Destination</a>
-          <a>Contact</a>
+          <a href='#home'>Home</a>
+          <a href='#about'>About</a>
         </div>
         <div className='sub-footer3'>
           <h2>GET IN TOUCH</h2>

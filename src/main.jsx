@@ -5,12 +5,15 @@ import WhatsappIcon from './user/components/WhatsappIcon.jsx';
 import Footer from './user/components/Footer.jsx';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
-
+import { I18nextProvider } from 'react-i18next';
+import i18n from './i18n.js';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <App />
-    <WhatsappIcon/>
-    <Footer/>
+    <I18nextProvider i18n={i18n}>
+      <App />
+      <WhatsappIcon/>
+      <Footer/>
+    </I18nextProvider>
   </React.StrictMode>,
 )

@@ -4,17 +4,19 @@ import img2 from '../../assets/about-img2.png';
 import img3 from '../../assets/about-img3.png';
 import kegiatan1 from '../../assets/kegiatan1.jpeg';
 import kegiatan2 from '../../assets/kegiatan2.jpeg';
+import { useTranslation } from 'react-i18next';
 
 const About = () => {
+  const { t } = useTranslation();
   return (
     <div className='about-container' id='about'>
-      <h1>TENTANG KAMI</h1>
-      <p>Kami telah bekerja dengan 200+ klien</p>
+      <h1>{t('About Us')}</h1>
+      <p>{t('We have worked with 200+ clients')}</p>
       <div className='about-sub1'>
         <div>
-          <h2>PT. BINA <span style={{color:'red'}}>DINAMITA</span> RAMA</h2>
-          <p>Perusahaan kami didirikan dengan tekad untuk melatih dan menghasilkan sumber daya manusia yang berkualitas. Hal ini bertujuan untuk memenuhi kebutuhan tenaga kerja di kancah internasional sesuai dengan kualifikasi yang ada. Selain menyalurkan tenaga kerja secara global, perusahaan kami juga fokus dalam membantu perbaikan kehidupan masyarakat melalui pelayanan pemberian tenaga kerja.</p>
-          <p>Kami selalu berkomitmen untuk mempertahankan kualitas rekrutmen sumber daya manusia yang berdasarkan nilai profesionalisme. Dedikasi yang kami berikan melalui peningkatan dan pengembangan sumber daya adalah untuk memberikan sumber daya manusia yang terlatih dan kompeten. Diharapkan dengan semangat dan usaha yang baik, kami dapat memberikan pelayanan yang terbaik dan memuaskan untuk klien kami.</p>
+          <h2>{t('BINA')} <span style={{color:'red'}}>{t('DINAMITA')}</span> {t('RAMA Ltd.')}</h2>
+          <p>{t('Ever since its first establishment, our company has always focused on training and delivering the best human resource in order to fulfill the demand of labor from overseas. Aside from making our movement in other countries, our company also focuses on improving the living standard of our people through providing employment.')}</p>
+          <p>{t('We commit to maintain our recruitment system based on professionalism. Through dedication to advancement and development of the resources, our company strives to deliver trained and capable human resources based on the requirement and needs of our clients.')}</p>
         </div>
         <div>
           <img src={img1} alt='img1'/>
@@ -26,8 +28,8 @@ const About = () => {
       </div>
       <div className='about-sub3'>
         <div className='about-sub3-desc'>
-          <h1>Kegiatan Kami</h1>
-          <p>Kami memberikan pendidikan dan pelatihan dari segi bahasa dan kemampuan yang menunjang kualitas sumber daya manusia sesuai kebutuhan klien. Dengan adanya fasilitas penunjang berupa asrama dan sistem pembelajaran yang modern, kami menjamin kepuasan dari pengguna jasa perusahaan kami.</p>
+          <h1>{t('Our activities')}</h1>
+          <p>{t('Our company provides thorough education and training in terms of language and skills which are necessary to fulfill the requirement from our clients. With the complete facilities from the dorm until the modern education system, we guarantee our partners satisfaction over the provided human resources.')}</p>
           <button>Portofolio</button>
         </div>
         <div className='about-sub3-img'>

@@ -5,7 +5,7 @@ body{
 }
 html{
   scroll-behavior: smooth;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-family: 'Verdana';
 }
 .navbar {
   background: #ffffff;
@@ -121,7 +121,7 @@ html{
     color: black;
     list-style: none;
     padding: 10px;
-    margin-left: 35%;
+    margin-left:10%;
     margin-top: 150px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     border-radius: 4px;
@@ -238,7 +238,7 @@ html{
   display: flex;
   flex-direction: row;
   margin-top: 20px;
-  background-color: #1a1a1a;
+  background-color: #000000;
   color: white;
   padding: 4rem 2rem;
 }
@@ -721,8 +721,9 @@ html{
   gap: 50px;
   align-items: first baseline;
 }
-.footer p{
+.footer p, a{
   color: white;
+  text-decoration: none;
 }
 .sub-footer1 img{
   width: 300px;
