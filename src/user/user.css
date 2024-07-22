@@ -162,8 +162,7 @@ html{
 }
 .hero-content h1{
   font-size: 5vw;
-  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-  font-weight: bold;
+  font-weight: bolder;
   color: #04aa3b; 
 }
 
@@ -218,7 +217,7 @@ html{
   flex-direction: row-reverse;
   gap: 20px;
   padding: 4rem 2rem;
-  align-items: end;
+  align-items: center;
 }
 .about-sub1 h2{
   font-size: 5vh;
@@ -282,6 +281,129 @@ html{
   object-fit: cover;
 }
 
+/* service */
+.service{
+  padding: 20px;
+}
+.service h1{
+  color: #04aa3b;
+}
+.sub-service{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: center;
+}
+.sub-service1{
+  width: 50%;
+  color: #615656;
+  font-size: 1.5vw;
+}
+
+.sub-service2 ul{
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  max-width: fit-content;
+  margin-inline: auto;
+  background-color: #fff;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  padding: 10px;
+}
+.sub-service2 li{
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  align-items: center;
+  gap: 5px;
+  font-size: 1.5vw;
+  margin-top: 10px;
+}
+.icon-service1{
+  background-color: #e979ff;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon-service2{
+  background-color: #ff7979;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon-service3{
+  background-color: #9279ff;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon-service4{
+  background-color: #79ff8f;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon-service5{
+  background-color: #798dff;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon-service6{
+  background-color: #e979ff;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+.icon-service7{
+  background-color: #89ff79;
+  padding: 5px 10px;
+  color: white;
+  border-radius: 10px;
+}
+
+/* portofolio */
+
+.portofolio{
+  padding: 20px;
+  background-color: #000000;
+
+}
+.portofolio h1{
+  font-size: 2.5vw;
+}
+.sub-portofolio1{
+  display: flex;
+  flex-direction: row;
+  color: white;
+}
+.portofolio-desc{
+  width: 100%;
+}
+.portofolio p{
+  font-size: 1.5vw;
+}
+.portofolio-sponsor{
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+.portofolio-sponsor img{
+  width: 150px;
+  height: 125px;
+}
+.sub-portofolio2{
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5vh;
+}
+.portofolio-experience{
+  color: #04aa3b;
+  text-align: center;
+}
 /* news */
 
 .news-container{
@@ -708,8 +830,8 @@ html{
   display: flex;
   flex-direction: row;
   justify-content: center;
-  margin-top: -30vh;
-  padding-top: 50vh;
+  /* margin-top: -30vh; */
+  padding-top: 30vh;
   color: white;
   gap: 50px;
   align-items: first baseline;
@@ -874,6 +996,32 @@ html{
   }
   .about-sub3 p{
     font-size: 4vw;
+  }
+  .sub-service{
+    flex-direction: column;
+  }
+  .service h1{
+    font-size: 4vw;
+  }
+  .sub-service1{
+    font-size: 3vw;
+    width: 100%;
+  }
+  .sub-service2 li{
+    font-size: 1.8vw;
+  }
+  .sub-portofolio1{
+    flex-direction: column;
+  }
+  .portofolio h1{
+    font-size: 4vw;
+  }
+  .portofolio p{
+    font-size: 3vw;
+  }
+  .portofolio-sponsor img{
+    width: 100px;
+    height: 75px;
   }
 }
   

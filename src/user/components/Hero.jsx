@@ -13,7 +13,7 @@ const Hero = () => {
     <div className='hero-container' id='home'>
       <div className='hero-content'>
         <div>
-          <h1>{t('BINA')} <span>{t('DINAMITA')}</span> {t('RAMA Ltd.')}</h1>
+          <h1 style={{fontFamily:'cursive'}}>{t('BINA')} <span>{t('DINAMITA')}</span> {t('RAMA Ltd.')}</h1>
           <h3>{t('Indonesian Migrant Workers')}</h3>
           <h3><span style={{color:'red'}}>{t('Placement')}</span> {t('Agencies')}</h3>
         </div>

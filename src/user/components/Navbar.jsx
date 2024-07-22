@@ -56,6 +56,9 @@ const Navbar = () => {
   const openDropdwon = () => {
     setShowDropdown(!showDropdown);
   };
+   const closeDropdown=()=>{
+    setShowDropdown(false);
+   }
 
   const navigate = useNavigate('');
 

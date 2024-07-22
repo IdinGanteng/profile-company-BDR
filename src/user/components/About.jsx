@@ -30,7 +30,7 @@ const About = () => {
         <div className='about-sub3-desc'>
           <h1>{t('Our activities')}</h1>
           <p>{t('Our company provides thorough education and training in terms of language and skills which are necessary to fulfill the requirement from our clients. With the complete facilities from the dorm until the modern education system, we guarantee our partners satisfaction over the provided human resources.')}</p>
-          <button>Portofolio</button>
+          {/* <button>Portofolio</button> */}
         </div>
         <div className='about-sub3-img'>
           <img src={kegiatan1} alt='kegiatan1'/>
